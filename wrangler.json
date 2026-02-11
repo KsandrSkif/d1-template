@@ -1,16 +1,12 @@
 {
-	"compatibility_date": "2025-10-08",
-	"main": "src/index.ts",
-	"name": "d1-template",
-	"upload_source_maps": true,
-	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_id": "b096b835-1ce9-40f2-b3ab-81a97b953b0a",
-			"database_name": "darkchat-db"
-		}
-	],
-	"observability": {
-		"enabled": true
-	}
+  "name": "darkchat-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-01-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "darkchat-db",
+      "database_id": "ВАШ_DATABASE_ID_ЗДЕСЬ"
+    }
+  ]
 }
