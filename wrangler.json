@@ -1,12 +1,16 @@
 {
-  "name": "darkchat-worker",
+  "name": "d1-template",
   "main": "src/index.ts",
   "compatibility_date": "2024-01-01",
+  "upload_source_maps": true,
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "darkchat-db",
       "database_id": "b096b835-1ce9-40f2-b3ab-81a97b953b0a"
     }
-  ]
+  ],
+  "observability": {
+      "enabled": true
+   }
 }
