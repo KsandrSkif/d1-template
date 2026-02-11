@@ -6,7 +6,7 @@
     {
       "binding": "DB",
       "database_name": "darkchat-db",
-      "database_id": "ВАШ_DATABASE_ID_ЗДЕСЬ"
+      "database_id": "DB"
     }
   ]
 }
