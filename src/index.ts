@@ -69,7 +69,14 @@ export default {
 			'X-Frame-Options': 'DENY',
 		};
 		
-		if (path === '/') {
+		if (request.method === 'OPTIONS') {
+			return new Response(null, { headers: corsHeaders });
+		}
+		
+		const url = new URL(request.url);
+		const path = url.pathname;
+		
+if (path === '/') {
   return new Response(JSON.stringify({ 
     status: 'ok',
     name: 'DarkChat Worker',
@@ -80,12 +87,6 @@ export default {
   });
 }
 		
-		if (request.method === 'OPTIONS') {
-			return new Response(null, { headers: corsHeaders });
-		}
-		
-		const url = new URL(request.url);
-		const path = url.pathname;
 		const clientIP = request.headers.get('CF-Connecting-IP') || 'unknown';
 		
 		const allowed = await checkRateLimit(env.DB, `global:${clientIP}`, RATE_LIMIT_MAX);
