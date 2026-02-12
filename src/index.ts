@@ -69,6 +69,17 @@ export default {
 			'X-Frame-Options': 'DENY',
 		};
 		
+		if (path === '/') {
+  return new Response(JSON.stringify({ 
+    status: 'ok',
+    name: 'DarkChat Worker',
+    version: '2.1'
+  }), {
+    status: 200,
+    headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+  });
+}
+		
 		if (request.method === 'OPTIONS') {
 			return new Response(null, { headers: corsHeaders });
 		}
