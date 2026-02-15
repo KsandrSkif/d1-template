@@ -6,15 +6,13 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
-    "db:init": "wrangler d1 execute darkchat-db --file=./migrations/0001_initial.sql",
-    "db:remote": "wrangler d1 execute darkchat-db --command=\"SELECT name FROM sqlite_master WHERE type='table';\""
+    "build": "echo 'No build needed'"
   },
-  "keywords": ["chat", "cloudflare", "worker", "d1"],
+  "keywords": ["chat", "cloudflare", "worker"],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240208.0",
-    "typescript": "^5.3.3",
     "wrangler": "^3.30.0"
   }
 }
